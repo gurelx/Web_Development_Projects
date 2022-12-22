@@ -1,0 +1,33 @@
+#title {
+  font-family: 'Estonia';
+  font-size: 100px;
+  font-weight: 500;
+  font-display: swap;
+  text-align: center;
+  src: url(https://fonts.gstatic.com/s/lato/v20/S6u8w4BMUTPHjxsAUi-qJCY.woff2) format('woff2');
+}
+body {
+  background-color: #d9d9d9;
+}
+#image {
+ display: block;
+ max-width: 100%;
+ height: auto;
+ margin: auto;
+}
+#img-caption{
+  text-align: center;
+}
+#tribute-info{
+  display: block;
+  margin: auto;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  font-size: 20px;
+  background-color: #b0b0b0;
+  max-width: 100%;
+}
+ul {
+	list-style: none;
+}

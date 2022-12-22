@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Documentation Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header><h1>CSS Basics</h1></header>
+      <ol>
+      <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+      <li><a href="#What_is_CSS?" class="nav-link">What is CSS?</a></li>
+      <li><a href="#Anatomy_of_a_CSS_ruleset" class="nav-link">Anatomy of a CSS ruleset</a></li>
+      <li><a href="#Selecting_multiple_elements" class="nav-link">Selecting multiple elements</a></li>
+      <li><a href="#Different_types_of_selectors" class="nav-link">Different types of selectors</a></li>  
+    </ol>
+  </nav>
+  <main id= "main-doc">
+    <section class="main-section" id="Introduction">
+     <header><h2>Introduction</h2></header>
+      <article> 
+       <p> Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p> 
+
+<p>CSS is among the core languages of the open web and is standardized across Web browsers according to W3C specifications. Previously, development of various parts of CSS specification was done synchronously, which allowed versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.</p>
+
+<p>From CSS3, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to develop and release recommendations separately per module. Instead of versioning the CSS specification, W3C now periodically takes a snapshot of the latest stable state of the CSS specification.
+       </p>
+     </article>
+   </section>
+   <section class="main-section" id="What_is_CSS?">
+     <header><h2>What is CSS?</h2></header>
+     <article>
+      <p>
+        Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red:</p>  
+       <code class="display">p { 
+         color:red; 
+         }</code>
+       <p>
+         Let's try it out! Using a text editor, paste the three lines of CSS (above) into a new file. Save the file as <code>style.css</code>  in a directory named <code>styles</code>.
+       </p>
+       <p>
+         To make the code work, we still need to apply this CSS (above) to your HTML document. Otherwise, the styling won't change the appearance of the HTML.       </p>
+        <ol>
+        <li>
+          Open your <code>index.html</code> file. Paste the following line in the head (between the <head> and </head> tags):
+          <p><code class="display">
+            &lt;link href="styles/style.css" rel="stylesheet"&gt; 
+            </code></p>
+        </li>
+        <li>
+          Save <code>index.html</code>  and load it in your browser. You should see something like this:
+        </li>
+          <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png" alt="mozilla website red text">
+      </ol>
+       <p>
+         If your paragraph text is red, congratulations! Your CSS is working.
+       </p>
+     </article>
+    </section>
+    <section class="main-section" id="Anatomy_of_a_CSS_ruleset">
+      <header><h2>Anatomy of a CSS ruleset</h2></header>
+        <p>
+          Let's dissect the CSS code for red paragraph text to understand how it works :
+       </p>
+       <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" alt="sections of css code">
+       <p>
+         The whole structure is called a <b>ruleset</b>. (The term <i>ruleset</i> is often referred to as just <i>rule</i>.) Note the names of the individual parts:
+       </p>
+        <p><b>Selector</b></p>
+          <p style="margin-left: 30px">
+        This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this example, &lt;p&gt;  elements). To style a different element, change the selector.
+          </p>
+       <p><b>Declaration</b></p>
+        <p style="margin-left: 30px">This is a single rule like <code class="display"> color: red;</code>. It specifies which of the element's properties you want to style.
+        </p>
+       <p><b>Properties</b></p>
+        <p style="margin-left: 30px">
+          These are ways in which you can style an HTML element. (In this example, <code>color</code> is a property of the &lt;p&gt; elements.) In CSS, you choose which properties you want to affect in the rule.
+        </p>
+      <p><b>Property value</b></p>
+        <p style="margin-left: 30px">
+          To the right of the property—after the colon—there is the <b>property value</b>. This chooses one out of many possible appearances for a given property. (For example, there are many <code>color</code> values in addition to <code>red</code>.)
+        </p>
+      <p>
+        Note the other important parts of the syntax:
+      </p>
+      <ul>
+        <li>Apart from the selector, each ruleset must be wrapped in curly braces. (<code>{}</code>)</li>
+        <li>Within each declaration, you must use a colon (<code>:</code>) to separate the property from its value or values.</li>
+        <li>Within each ruleset, you must use a semicolon (<code>;</code>) to separate each declaration from the next one.</li>
+      </ul>
+      <p>
+        To modify multiple property values in one ruleset, write them separated by semicolons, like this:
+      </p>
+      <code class= "display" >
+        p {
+  color: red;
+  width: 500px;
+  border: 1px solid black;
+}
+      </code>
+   </section>
+   <section class="main-section" id= "Selecting_multiple_elements">
+     <header><h2>Selecting multiple elements</h2></header>
+     <p>
+       You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example:
+     </p>
+     <code class="display">
+       p, li, h1 {
+  color: red;
+}
+     </code>
+   </section>
+   <section class="main-section" id= "Different_types_of_selectors">
+     <header><h2>Different types of selectors</h2></header>
+     <p>
+       There are many different types of selectors. The examples above use element selectors, which select all elements of a given type. But we can make more specific selections as well. Here are some of the more common types of selectors:
+     </p>
+     <table>
+       <tr>
+         <th>Selector name</th>
+         <th>What does it select</th>
+         <th>Example</th>
+       </tr>
+       <tr>
+         <td>Element selector (sometimes called a tag or type selector)</td>
+         <td>	All HTML elements of the specified type.</td>
+         <td>p <br> selects &lt;p&gt;</td>
+       </tr>
+       <tr>
+         <td>ID selector</td>
+         <td>The element on the page with the specified ID. On a given HTML page, each id value should be unique.</td>
+         <td>#my-id <br>
+selects &lt;p id="my-id"&gt; or &lt;a id="my-id"&gt;</td>
+       </tr>
+       <tr>
+         <td>Class selector</td>
+         <td>The element(s) on the page with the specified class. Multiple instances of the same class can appear on a page.</td>
+         <td>.my-class <br>
+selects &lt;p class="my-class"&gt; and &lt;a class="my-class"&gt;</td>
+       </tr>
+       <tr>
+         <td>Attribute selector</td>
+         <td>The element(s) on the page with the specified attribute.</td>
+         <td>img[src] <br>
+selects &lt;img src="myimage.png"&gt; but not &lt;img&gt;</td>
+       </tr>
+       <tr>
+         <td>Pseudo-class selector</td>
+         <td>The specified element(s), but only when in the specified state. (For example, when a cursor hovers over a link.)</td>
+         <td>a:hover <br>
+selects &lt;a&gt;, but only when the mouse pointer is hovering over the link.</td>
+       </tr>
+     </table>
+     <p>
+       There are many more selectors to discover. To learn more, see the MDN <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors">Selectors guide</a>.
+     </p>
+   </section>
+   <p>To read more on this article see <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">MDN</a> website.</p>
+  </main>
+</body>
+</html>

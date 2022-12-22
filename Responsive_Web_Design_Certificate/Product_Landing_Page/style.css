@@ -1,0 +1,273 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+
+body {  
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-image:     url("https://www.logodesign.net/images/illustration-logo.png");
+  background: linear-gradient(
+    rgba(255,255,255,.9),
+    rgba(255,255,255,.8)), url("https://www.logodesign.net/images/illustration-logo.png");
+  background-size: 50vw;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@media (max-width: 650px){
+  body{
+    background-size: 100vw;
+  }
+}
+
+
+
+#header {
+  display: flex;
+  width: 100%;
+  text-align: end;
+  position: fixed;
+}
+
+.company-logo {
+  width: 130px;
+}
+
+
+@media (max-width: 650px){
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+  li {
+    padding: 0 10px;
+    font-weight: none;
+    font-size: 10px;
+  }
+}
+
+nav {
+   background-color: rgb(150, 150, 150, 0.6);
+   background-opacity: 0.4;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: end;
+   text-align: center;
+   padding-top: 20px;
+   margin: none;
+  }
+
+ul {
+  list-style: none;
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+li {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.background-img{
+  position: absolute;
+  text-align: center;
+}
+#contact {
+  padding-top: 150px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+form {
+  margin-bottom: 25px;
+}
+
+button {
+  border-style: none;
+  background-color: #e60000;
+  color: white;
+  font-weight: 900;
+  font-size: 1em;
+  margin-top: 10px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input[type='email'] {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
+}
+
+.grid {
+  display: flex;
+}
+
+#program {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 550px) {
+  #program .icon {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  #program .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+}
+
+@media (max-width: 550px) {
+  #video {
+    width: 60px;
+    height: 40px;
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: darkorange;
+  width: 15vw;
+   
+}
+
+.material-icons.md-48 { 
+  font-size: 60px; 
+}
+
+.desc {
+width: 35vw;
+flex-direction: column;
+align-items: center;
+height: 150px;
+}
+
+#how-it-works {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+#video {
+  margin-top: 20px;
+  width: 600px;
+  height: 400px;
+}
+
+#pricing {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 20vw;
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.product > .level {
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.product > h2 {
+  margin-top: 15px;
+}
+
+.product > ol {
+  margin: 15px 0;
+  padding-right: 15px;
+  
+}
+
+.product > ol > li {
+  padding: 5px;
+  list-style: none;
+  text-align: start;
+}
+
+.product > button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #e60000;
+  font-weight: 400;
+}
+
+ button:hover {
+  background-color: darkorange;
+  transition: background-color 0.5s;
+}
+
+@media (max-width: 800px) {
+  #pricing {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+
+footer {
+  margin-top: 30px;
+  background-color: rgb(150, 150, 150, 0.6);
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
