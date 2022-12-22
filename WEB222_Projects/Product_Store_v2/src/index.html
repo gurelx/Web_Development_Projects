@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Change this to your name-->
+  <meta name="author" content="Gurel Sezgin" />
+  <meta name="description" content="WEB222 Fall 2022 Assignment 5" />
+
+  <title>Wine Store</title>
+  <!-- Optional CSS Overrides -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  <!-- Wine logo in the tab -->
+  <link rel="icon" href="/media/wine.png" />
+</head>
+
+<body id="main">
+  <!-- Navigation menu -->
+  <nav id="category-menu">
+    <!-- Navigation close button -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <h1>Categories</h1>
+    <!-- Dynamically create your menu category buttons here -->
+  </nav>
+  <!-- Navigation open button -->
+  <span id="nav_span" onclick="openNav()">&#9776;</span>
+
+  <!-- Main header -->
+  <header id="top_header">
+    <!-- Store's info -->
+    <h1>Wine Store</h1>
+    <p>Best wines for you...</p>
+  </header>
+
+  <!-- Main picture and advertisement -->
+  <section id="home">
+    <div id="content">
+      <h3>home grown and <span>organic</span> products for you</h3>
+      <p>Best wines selected specifically for the web assignment. You can sip, relax and enjoy with some of our best
+        selections.</p>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Main content for products -->
+  <div id="body">
+    <!-- Dynamically created items list -->
+    <!--div id="container"-->
+    <!--h1 id="header"-->
+    <!--div id="card"-->
+    <!--div id="product_details" -->
+    <!--div id="product_name" -->
+    <!--div id="product_desc" -->
+    <!--div id="product_price" -->
+    <!--img id="product_img"-->
+  </div>
+
+  <!-- JavaScript Data Files -->
+  <script src="./js/categories.js"></script>
+  <script src="./js/products.js"></script>
+
+  <!-- Main App JavaScript File -->
+  <script src="./js/app.js"></script>
+</body>
+<hr />
+
+<footer> © Copyright 2022 WEB222 Assignment by Gurel Sezgin</footer>
+
+</html>

@@ -1,0 +1,257 @@
+/**
+ * Override any styles here that you want to change (optional)...
+ */
+
+/* The font used */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* General presets */
+* {
+    font-family: "Poppins", sans-serif;
+    background-color: #e7e7e7;
+    margin: 0;
+    padding: 0;
+}
+
+/* For the nav menu to slide all the items */
+#main {
+    transition: margin-left .5s;
+}
+
+/* Company logo and slogan */
+#top_header {
+    height: 2vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 9%;
+    background: #111;
+    box-shadow: #818181;
+}
+
+#top_header h1,
+p {
+    background: #111;
+    color: #e7e7e7;
+}
+
+#top_header h1 {
+    margin-right: 15px;
+}
+
+#top_header p {
+    margin-top: 10px;
+}
+
+/* The main picture and the advertisement */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/media/home.jpg) no-repeat;
+    background-position: center;
+    filter: grayscale(10%);
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+    box-shadow: 0px 10px 10px -5px gray;
+    color: white;
+
+}
+
+#home #content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, .4);
+    width: 60rem;
+}
+
+#home #content h3 {
+    background: none;
+    font-size: 3rem;
+}
+
+#home #content h3 span {
+    background: none;
+    font-style: italic;
+    color: red;
+}
+
+#home #content p {
+    background: none;
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+/* Nav bar and the menu items */
+#category-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+#category-menu h1 {
+    position: relative;
+    display: block;
+    background-color: #111;
+    color: #e7e7e7;
+    font-family: "Poppins", sans-serif;
+    padding: 18px 18px 18px 32px;
+    border-bottom: solid #818181 1px;
+    font-size: 25px;
+}
+
+
+/* Categories brought by app.js */
+#category-menu button {
+    position: relative;
+    padding: 18px 18px 18px 32px;
+    background-color: #111;
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#category-menu button:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+#category-menu .closebtn {
+    text-decoration: none;
+    background: none;
+    position: absolute;
+    color: #818181;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Navigation opening button (top left corner)*/
+#nav_span {
+    margin: 20px;
+    width: 36px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: fixed;
+    padding-left: 10px;
+    background-color: #111;
+    border-radius: 50%;
+    z-index: 11;
+    box-shadow: 1px 1px 10px 2px gray;
+
+}
+
+/* Main div for product display */
+#body {
+    margin-top: 40px;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Category header */
+#body h1 {
+    font-size: 3rem;
+    margin: 4rem;
+}
+
+/* Container for the product cards */
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Product card */
+#card {
+    position: relative;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    border-radius: 1%;
+}
+
+/* Product image */
+#product_img {
+    width: 100%;
+    height: auto;
+}
+
+/* Product details (including name, description, price) */
+#product_details {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3%;
+    gap: 1em;
+    padding: 2em;
+    background-color: #111111;
+    transform: translateY(-60%);
+    height: 6%;
+    transition: .3s ease-in-out;
+}
+
+#card:hover #product_details {
+    transform: translateY(-100%);
+    height: 32%;
+}
+
+/* Product name */
+#product_details span {
+    font-size: 1.2em;
+    margin: 0 0 .4em;
+    background: none;
+    color: white;
+}
+
+/* Product description */
+#product_details p {
+    padding: 0 2em 2em;
+    margin: 0;
+    height: fit-content;
+    width: 100%;
+    color: #D7BDCA;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+#card:hover #product_details p {
+    opacity: 100;
+}
+
+/* Product price */
+#product_details #product_price {
+    background: none;
+    color: white;
+    font-size: 1.3em;
+}

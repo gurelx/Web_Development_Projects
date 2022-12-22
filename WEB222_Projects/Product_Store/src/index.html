@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Change this to your name-->
+    <meta name="author" content="Gurel Sezgin" />
+    <meta name="description" content="WEB222 Fall 2022 Assignment 4" />
+
+    <title>Wine Store</title>
+
+    <!-- Classless CSS Stylesheet - https://andybrewer.github.io/mvp/ -->
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css" />
+    <!-- Optional CSS Overrides -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Change this to your Store's info -->
+      <h1>Wine Store</h1>
+      <p>Best wines for you...</p>
+    </header>
+
+    <nav id="category-menu">
+      <!-- Dynamically create your menu category buttons here -->
+    </nav>
+
+    <hr />
+
+    <main>
+      <h2 id="category">
+        <!-- Dynamically update the selected category title -->
+      </h2>
+
+      <table>
+        <thead>
+          <div id="header"></div>
+          <!-- Statically create the headings for your table here -->
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+        </thead>
+        <tbody id="products">
+          <!-- Dynamically create your product rows here -->
+        </tbody>
+      </table>
+    </main>
+
+    <!-- JavaScript Data Files -->
+    <script src="./js/categories.js"></script>
+    <script src="./js/products.js"></script>
+
+    <!-- Main App JavaScript File -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
